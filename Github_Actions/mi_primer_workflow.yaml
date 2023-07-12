@@ -1,0 +1,17 @@
+name: Mi primer flujo de trabajo
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Corre un comando de una sola línea
+      run: echo Hola, mundo!
+
+    - name: Corre múltiples comandos
+      run: |
+        echo Añade otro comando
+        echo Y aún otro
